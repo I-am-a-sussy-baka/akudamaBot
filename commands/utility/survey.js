@@ -1,8 +1,4 @@
-// at the top of your file
 const { EmbedBuilder, SlashCommandBuilder } = require('discord.js');
-
-
-// inside a command, event listener, etc.
 
 module.exports = {
 	data: new SlashCommandBuilder()
