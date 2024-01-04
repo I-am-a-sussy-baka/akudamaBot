@@ -5,9 +5,8 @@ const { EmbedBuilder, SlashCommandBuilder } = require('discord.js');
 // inside a command, event listener, etc.
 const exampleEmbed = new EmbedBuilder()
 	.setColor(0x0099FF)
-	.setTitle('Some title')
-	.setURL('https://discord.js.org/')
-	.setAuthor({ name: 'Some name', iconURL: 'https://i.imgur.com/AfFp7pu.png', url: 'https://discord.js.org' })
+	.setTitle('Umfrage')
+	.setAuthor({ name: 'Akudama.cc', iconURL: 'https://i.imgur.com/AfFp7pu.png', url: 'https://github.com/I-am-a-sussy-baka/akudamaBot' })
 	.setDescription('Some description here')
 	.setThumbnail('https://i.imgur.com/AfFp7pu.png')
 	.addFields(
