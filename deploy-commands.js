@@ -7,8 +7,8 @@ const commands = [];
 const foldersPath = path.join(__dirname, 'commands');
 const commandFolders = fs.readdirSync(foldersPath);
 
+// Registers commands in 'commands/utility' for discord
 for (const folder of commandFolders) {
-
 	const commandsPath = path.join(foldersPath, folder);
 	const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.js'));
 
