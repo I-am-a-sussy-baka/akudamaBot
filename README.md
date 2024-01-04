@@ -17,3 +17,6 @@ You get a list of commands when you look up the '/' command list of the Bot, for
 
 
 ## Fetures
+
+/ping - Replies with "Pong!"
+/umfrage [title] [description] - Makes a survey
