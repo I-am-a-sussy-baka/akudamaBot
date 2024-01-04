@@ -1,9 +1,14 @@
-const { Events } = require('discord.js');
+const { Events, ActivityType } = require('discord.js');
 
 module.exports = {
     name: Events.ClientReady,
     once: true,
     execute(client) {
-        console.log('YES YES YES')
+        console.log('Ready!');
+        client.user.setPresence({
+            activities: [{ name: 'mit deinem code', type: ActivityType.Playing }],
+            status: '',
+          });
+          
     },
 };
