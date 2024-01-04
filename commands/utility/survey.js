@@ -12,21 +12,23 @@ module.exports = {
 			option
 				.setName('title')
 				.setDescription('Setze einen Titel fest')
-				.setRequired(true)),
+				.setRequired(true))
+		.addStringOption(option =>
+			option
+				.setName('beschreibung') // description
+				.setDescription('Setze eine Beschreibung fest')),
 				
 
 	async execute(interaction) {
-		const title = interaction.options.getString('title')
-		
+		const title = interaction.options.getString('title');
+		const description = interaction.options.getString('beschreibung') ?? '⠀';
+
 		const exampleEmbed = new EmbedBuilder()
 			.setColor(0x0099FF)
-			.setTitle("Umfrage")
+			.setTitle(title)
 			.setAuthor({ name: 'Akudama.cc', iconURL: 'https://i.imgur.com/BOWynyW.png', url: 'https://github.com/I-am-a-sussy-baka/akudamaBot' })
-			.setDescription('Bitte nimm an der Umfrage teil, indem du mit dem entsprechenden emoji reagierst')
+			.setDescription(description)
 			.setThumbnail('https://i.imgur.com/BOWynyW.png')
-			.addFields(
-				{ name: title, value: 'Optionale Beschreibung' },
-			)
 			.setTimestamp()
 			.setFooter({ text: 'https://github.com/I-am-a-sussy-baka/akudamaBot', iconURL: 'https://i.imgur.com/BOWynyW.png' });
 
